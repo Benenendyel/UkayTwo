@@ -1,0 +1,11 @@
+# run command ./mvnw spring-boot:run -Dspring-boot.run.profiles=local
+
+# Backend
+backend/target/
+backend/src/main/resources/application-local.properties
+
+# Frontend
+frontend/node_modules/
+frontend/web/UkayTwo/.env
+frontend/android/UkayTwo/.env
+frontend/dist/
