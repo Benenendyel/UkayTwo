@@ -10,4 +10,7 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] }),
   ],
+  preview: {
+    allowedHosts: ["ukaytwo-web-frontend.onrender.com"],
+  },
 });
