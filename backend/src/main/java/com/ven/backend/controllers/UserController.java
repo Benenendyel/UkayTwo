@@ -4,7 +4,6 @@ import com.ven.backend.entities.User;
 import com.ven.backend.services.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:5173")
 @RequestMapping("/api")
 public class UserController {
 
@@ -25,8 +23,13 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/register")
     public void createUser(@RequestBody User user) {
         userService.addUser(user);
+    }
+
+    @PostMapping("/login")
+    public String userLogin(@RequestBody User user) {
+        return userService.userLogin(user);
     }
 }
