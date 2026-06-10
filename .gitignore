@@ -1,4 +1,4 @@
-# run command ./mvnw spring-boot:run -Dspring-boot.run.profiles=local
+# ./mvnw spring-boot:run "-Dspring-boot.run.profiles=local"
 
 # Backend
 backend/target/
