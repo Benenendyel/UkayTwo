@@ -9,3 +9,6 @@ frontend/node_modules/
 frontend/web/UkayTwo/.env
 frontend/android/UkayTwo/.env
 frontend/dist/
+
+# Reference
+references/
