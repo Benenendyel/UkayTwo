@@ -14,6 +14,13 @@ public class UserRepository {
 
     @Autowired private JdbcTemplate jdbcTemplate;
 
+    // authentication part
+    public User verifyUser(User user) {
+        String sql = "SELECT email, password FROM users WHERE email = ?";
+        return jdbcTemplate.queryForObject(
+                sql, new BeanPropertyRowMapper<>(User.class), user.getEmail());
+    }
+
     public void createUser(User user) {
         String sql =
                 "INSERT INTO users (email, password, username, first_name, last_name, phone_num)"
@@ -28,6 +35,7 @@ public class UserRepository {
                 user.getPhoneNum());
     }
 
+    // JIC
     public List<User> getAllUsers() {
         String sql =
                 "SELECT email, password, username, "
