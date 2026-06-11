@@ -1,7 +1,7 @@
-package com.ven.backend.services;
+package com.ven.backend.service;
 
-import com.ven.backend.entities.User;
-import com.ven.backend.repositories.UserRepository;
+import com.ven.backend.entity.User;
+import com.ven.backend.repository.UserRepository;
 import com.ven.backend.utils.JwtUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
