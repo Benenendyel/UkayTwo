@@ -1,6 +1,6 @@
-package com.ven.backend.repositories;
+package com.ven.backend.repository;
 
-import com.ven.backend.entities.User;
+import com.ven.backend.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

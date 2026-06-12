@@ -1,4 +1,4 @@
-package com.ven.backend.entities;
+package com.ven.backend.entity;
 
 import java.time.LocalDateTime;
 
