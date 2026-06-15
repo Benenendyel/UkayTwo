@@ -1,6 +1,6 @@
-package com.ven.backend.repositories;
+package com.ven.backend.repository;
 
-import com.ven.backend.entities.User;
+import com.ven.backend.entity.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,6 +13,13 @@ import java.util.List;
 public class UserRepository {
 
     @Autowired private JdbcTemplate jdbcTemplate;
+
+    // authentication part
+    public User verifyUser(User user) {
+        String sql = "SELECT email, password FROM users WHERE email = ?";
+        return jdbcTemplate.queryForObject(
+                sql, new BeanPropertyRowMapper<>(User.class), user.getEmail());
+    }
 
     public void createUser(User user) {
         String sql =
@@ -28,6 +35,7 @@ public class UserRepository {
                 user.getPhoneNum());
     }
 
+    // JIC
     public List<User> getAllUsers() {
         String sql =
                 "SELECT email, password, username, "

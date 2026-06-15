@@ -1,4 +1,4 @@
-package com.ven.backend.entities;
+package com.ven.backend.entity;
 
 import java.time.LocalDateTime;
 
@@ -16,6 +16,11 @@ public class User {
     private LocalDateTime createdAt;
 
     public User() {}
+
+    public User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
 
     public User(
             String email,

@@ -1,12 +1,2 @@
-POST http://localhost:8080/api/users
-Content-Type: application/json
+GET http://localhost:8080/api/users
 
-{
-    "email": "venangel.tagaro@neu.edu.ph",
-    "password": "helloworld",
-    "userName": "venangel",
-    "firstName": "Ven Angel",
-    "lastName": "Tagaro",
-    "phoneNumber": "09569674584",
-    "userRole": "regular"
-}
